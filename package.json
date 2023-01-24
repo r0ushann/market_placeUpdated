@@ -12,6 +12,7 @@
     "axios": "^1.2.3",
     "bootstrap": "^5.2.3",
     "chai": "^4.3.7",
+    "dotenv": "^16.0.3",
     "ethereum-waffle": "^3.4.4",
     "ethers": "^5.7.2",
     "hardhat": "^2.12.6",

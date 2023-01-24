@@ -1,15 +1,19 @@
 require("@nomicfoundation/hardhat-toolbox");
-require("@nomiclabs/hardhat-waffle");
+require('dotenv').config();
+
 
 module.exports = {
-    defaultNetwork: "hardhat",
-    networks: {
-        hardhat: {},
-        // mumbai: {
-        //     url: https://polygon-mumbai.g.alchemy.com/v2/BoBVblJEM1aYN7X_bRvUlz40JQqRc2uZ,
-        //     accounts: [process.env.PRIVATE_KEY]
-        // }
-    },
+  defaultNetwork: "goerli",
+  defaultNetwork: "mumbai",
+  defaultNetwork: "mumbai",
+  networks: {
+      hardhat: {},
+      mumbai: {
+          url: process.env.STAGING_ALCHEMY_KEY,
+          accounts: [process.env.PRIVATE_KEY]
+      }
+  },
+
   solidity: "0.8.4",
   
   paths: {
@@ -18,4 +22,5 @@ module.exports = {
     cache: "./src/backend/cache",
     tests: "./src/backend/test"
   },
-};
+
+}
